@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: construction-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: construction-app
+  template:
+    metadata:
+      labels:
+        app: construction-app
+    spec:
+      containers:
+      - name: construction-app
+        image: construction-platform
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8080
+     
+     
+     
+     
